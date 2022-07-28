@@ -11,6 +11,7 @@ const wallet = (state = INITIAL_STATE, action) => {
   switch (action.type) {
   case WALLET_ACTION:
     return {
+      ...state,
       ...action.payload,
     };
   default:
