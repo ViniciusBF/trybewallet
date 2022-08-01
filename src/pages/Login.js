@@ -27,10 +27,10 @@ class Login extends React.Component {
     this.setState({ valid: [valid1, valid2].every((e) => e) });
   }
 
-  hadleClick = async () => {
+  hadleClick = () => {
     const { saveEmail, history } = this.props;
     const { email } = this.state;
-    await saveEmail({ email });
+    saveEmail({ email });
     history.push('/carteira');
   }
 
