@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { func, string } from 'prop-types';
+import { func, array } from 'prop-types';
 import { connect } from 'react-redux';
 import { fetchValues, saveExpensesAction } from '../redux/actions';
 
@@ -133,7 +133,7 @@ const mapDispatchToProps = (dispatch) => ({
 WalletForm.propTypes = {
   fetchfunc: func,
   saveExpenses: func,
-  currencies: string,
+  currencies: array,
 }.isRequired;
 
 export default connect(mapStateToProps, mapDispatchToProps)(WalletForm);
