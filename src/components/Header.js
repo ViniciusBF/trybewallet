@@ -20,7 +20,7 @@ class Header extends Component {
                   ? expenses.reduce((acc, curr) => (
                     (Number(curr.value) * curr.exchangeRates[curr.currency].ask + acc)
                   ), 0).toFixed(2)
-                  : 0
+                  : '0.00'
               }
             </span>
             <span data-testid="header-currency-field">{ ' BRL' }</span>
